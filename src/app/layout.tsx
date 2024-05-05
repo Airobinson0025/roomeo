@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import MainNavbar from "../components/global/navbar";
+import { SmoothScroll } from "@/components/providers/smooth-scroll";
 
 
 const font = DM_Sans({ subsets: ["latin-ext"] });
@@ -25,8 +26,10 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange>
-          <MainNavbar/>
-          {children}
+          <SmoothScroll>
+            <MainNavbar/>
+            {children}
+          </SmoothScroll>
         </ThemeProvider>
       </body>
     </html>

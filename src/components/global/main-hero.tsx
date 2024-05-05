@@ -14,7 +14,7 @@ const MainHero = () => {
       />
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-secondary to-transparent "></div>
       <div className="absolute top-1/2 left-44 sm:left-72 transform -translate-x-1/2 -translate-y-1/2 text-left text-white z-10">
-        <h1 className="lg:text-[4.5rem]">Roomeo.</h1>
+        <h1 className="text-5xl sm:text-7xl lg:text-[4.5rem]">Roomeo.</h1>
         <p className="text-lg lg:text-xl max-w-[500px]">
           The ultimate solution for young adults seeking compatible housemates and affordable housing in urban areas.
         </p>
