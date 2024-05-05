@@ -8,10 +8,10 @@ const MainSearch = () => {
     <div className='flex flex-col items-center my-12 px-10'>
         <div className='text-center'>
             <h2 className=''>Find listings that fit your needs.</h2>
-            <h4 className='mt-4 font-light text-muted-foreground'>Your Roomeo Matches Will Appear alongside listings results</h4>
+            <h4 className='mt-4 font-light text-muted-foreground'>Your Roomeo matches will appear alongside listings results</h4>
         </div>
 
-        <div className='flex items-center justify-between w-full max-w-[550px] mt-8'>
+        <div className='flex items-center justify-between w-full max-w-[550px] mt-6'>
             <Input
                 className='border-foreground text-md'
                 placeholder='Search for listings in your area'

@@ -18,9 +18,14 @@ const MainHero = () => {
         <p className="text-lg max-w-[500px] text-foreground">
           The ultimate solution for young adults seeking compatible roommates and affordable housing in urban areas.
         </p>
-        <Link href='/sign-up' className='z-10'>
-            <Button size='lg' className="bg-primary dark:bg-primary mt-6 text-md text-white hover:scale-105 transition duration-500">Get Started Today</Button>
-        </Link>
+        <div className='flex items-center gap-2 mt-5'>
+          <Link href='/sign-up' className='z-10'>
+              <Button size='lg' className="bg-primary dark:bg-primary text-md text-white hover:scale-105 transition duration-300">Get Started Today</Button>
+          </Link>
+          <Link href='/sign-up' className='z-10'>
+              <Button size='lg' className="bg-foreground shadow-md dark:border-secondary dark:hover:bg-primary dark:bg-foreground text-md text-secondary dark:text-secondary dark:hover:text-white dark:hover:border-white hover:text-white hover:scale-105 transition duration-300">Sign In</Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
