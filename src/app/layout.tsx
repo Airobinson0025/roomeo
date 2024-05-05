@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
 import MainNavbar from "../components/global/navbar";
 import { SmoothScroll } from "@/components/providers/smooth-scroll";
+import { ThemeProvider } from "@/components/toggles/theme-toggle";
 
 
 const font = DM_Sans({ subsets: ["latin-ext"] });

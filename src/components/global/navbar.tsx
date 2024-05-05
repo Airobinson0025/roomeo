@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from '../ui/button'
+import { ModeToggle } from '../toggles/mode-toggle'
 
 type Links= {
     name: string,
@@ -14,7 +15,6 @@ type MainNavbarProps = {
 
 const MainNavbar = () => {
 
-
     const links = [
         { name: 'Home', path: '/' },
         { name: 'Connect', path: '/connect' },
@@ -25,22 +25,20 @@ const MainNavbar = () => {
     ]
 
   return (
-    <div className='flex items-center justify-between w-full fixed p-3 bg-transparent text-foreground z-[1000]'>
-        <div>
-            <h3 className=''>Roomeo.</h3>
+    <div className='flex items-center justify-between w-full fixed py-2 pl-2 pr-8 bg-transparent backdrop-blur-md text-foreground z-[1000]'>
+        <div className='flex items-center gap-2'>
+            <ModeToggle />
+            <h3 className='text-foreground'>Roomeo.</h3>
         </div>
 
-        <nav className='hidden md:flex items-center gap-8 text-lg'>
+        <nav className='hidden md:inline'>
             <ul className='flex items-center gap-8'>
                 {links.map((link,index) => (
                     <li key={index} className='hover:scale-105 transition duration-300'>
-                        <Link href={link.path} className='text-md hover:text-secondary transition duration-300'>{link.name}</Link>
+                        <Link href={link.path} className='text-lg hover:text-muted dark:hover:text-primary transition duration-300'>{link.name}</Link>
                     </li>
                 ))}
             </ul>
-            <Link href='/sign-in'>
-                <Button className='text-md text-foreground'>Sign In</Button>
-            </Link>
         </nav>
     </div>
   )
