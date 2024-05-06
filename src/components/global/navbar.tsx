@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from '../ui/button'
 import { ModeToggle } from '../toggles/mode-toggle'
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
+
 
 type Links= {
     name: string,
@@ -19,13 +21,14 @@ const MainNavbar = () => {
         { name: 'Home', path: '/' },
         { name: 'Connect', path: '/connect' },
         { name: 'Listings', path: '/listings' },
-        { name: 'Profile', path: '/profile' },
+        // { name: 'Profile', path: '/profile' },
+        { name: 'Pricing', path: '/pricing' },
         { name: 'Blog', path: '/blog' },
         
     ]
 
   return (
-    <div className='flex items-center justify-between w-full fixed py-2 pl-2 pr-8 bg-transparent backdrop-blur-md text-foreground z-[1000]'>
+    <div className='flex items-center justify-between w-full fixed py-3 pl-2 pr-8 bg-transparent backdrop-blur-md text-foreground z-[1000]'>
         <div className='flex items-center gap-2'>
             <ModeToggle />
             <h3 className='text-foreground'>Roomeo.</h3>
@@ -40,6 +43,15 @@ const MainNavbar = () => {
                 ))}
             </ul>
         </nav>
+
+        <div>
+            <Link href='/profile'>
+                <Avatar>
+                    <AvatarImage src="https://github.com/shadcn.png" />
+                    <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+            </Link>
+        </div>
     </div>
   )
 }
